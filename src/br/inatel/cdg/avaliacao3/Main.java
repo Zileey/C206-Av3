@@ -18,10 +18,9 @@ public class Main {
         System.out.println("--------------------------------------------------------");
         opcao = sc.nextInt();
 
-        do{
-            switch (opcao){
-                case 1:
-                {
+        do {
+            switch (opcao) {
+                case 1: {
                     Pedido p1 = new Pedido();
                     System.out.println("Digite o numero do pedido:");
                     p1.id = sc.nextInt();
@@ -37,11 +36,10 @@ public class Main {
                     break;
                 }
 
-                case 2:
-                {
+                case 2: {
                     ArrayList<Pedido> ped = a.ler();
 
-                    for(int i = 0; i < ped.size(); i++){
+                    for (int i = 0; i < ped.size(); i++) {
                         System.out.println("Pedido n: " + ped.get(i).id);
                         System.out.println("Tipo de madeira: " + ped.get(i).tipoMadeira);
                         System.out.println("Preço de produção: " + ped.get(i).precoProducao);
@@ -49,18 +47,16 @@ public class Main {
                     }
                     break;
                 }
-                case 0:
-                {
+                case 0: {
                     System.out.println("Obrigado por usar nosso sistema!");
                     break;
                 }
                 default:
                     System.out.println("Opção inválida!");
-        }while(opcao != 0);
+            }
+        }while (opcao != 0) ;
 
 
-
-
-        sc.close();
+            sc.close();
+        }
     }
-}
